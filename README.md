@@ -22,7 +22,7 @@ npm install
 npm run dev
 ```
 ## Screenshot
-![Quixel Dashboard](https://github.com/andywahyudi/quixel/public/screenshot.jpg)
+![Quixel Dashboard](https://github.com/andywahyudi/quixel/blob/main/public/screenshot.jpg)
 
 ## Project Structure
 ```
