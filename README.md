@@ -21,6 +21,8 @@ npm install
 ```bash
 npm run dev
 ```
+## Screenshot
+![Quixel Dashboard](https://github.com/andywahyudi/quixel/public/screenshot.jpg)
 
 ## Project Structure
 ```
