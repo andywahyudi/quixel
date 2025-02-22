@@ -1,11 +1,214 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import MainLayout from '../layouts/MainLayout.astro';
+import { House, GraduationCap, Trophy, Compass, Briefcase, Coins, BookOpen, Award, Gamepad } from 'lucide-astro'
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<MainLayout title="Quixel - Dashboard">
+  <div class="max-w-7xl mx-auto p-6 bg-black text-white">
+    <!-- Header/Navigation -->
+    <header class="flex justify-between items-center mb-8">
+      <div class="text-2xl font-bold">quixel</div>
+      <nav class="flex space-x-6">
+        <a href="#" class="text-white p-2 hover:rounded-full hover:bg-gray-200 hover:text-black flex items-center gap-2">
+          <House size={20} /> Dashboard
+        </a>
+        <a href="#" class="text-white p-2 hover:rounded-full hover:bg-gray-200 hover:text-black flex items-center gap-2">
+          <GraduationCap size={20} /> Courses
+        </a>
+        <a href="#" class="text-white p-2 hover:rounded-full hover:bg-gray-200 hover:text-black flex items-center gap-2">
+          <Trophy size={20} /> Challenges
+        </a>
+        <a href="#" class="text-white p-2 hover:rounded-full hover:bg-gray-200 hover:text-black flex items-center gap-2">
+          <Compass size={20} /> Career Paths
+        </a>
+        <a href="#" class="text-white p-2 hover:rounded-full hover:bg-gray-200 hover:text-black flex items-center gap-2">
+          <Briefcase size={20} /> Job Board
+        </a>
+      </nav>
+      <div class="flex items-center space-x-2">
+        <img src="/avatar.png" alt="Profile" class="w-8 h-8 rounded-full" />
+        <span>Hi, Andy!</span>
+      </div>
+    </header>
+
+	<!-- Content Section Begin -->
+	<div class="border border-gray-200 rounded-lg p-8 bg-white text-black">
+    <!-- Welcome and Stats Section -->
+	<div class="flex justify-between items-start mb-8">
+        <!-- Welcome Section -->
+        <div class="flex-shrink-0">
+          <h1 class="text-3xl font-bold mb-2">Good Morning, Andy!</h1>
+          <p class="text-gray-600">You're 37% closer to your goal. ⚡</p>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="grid grid-cols-4 gap-4">
+			<div class="bg-purple-100 rounded-xl p-4 shadow-sm border border-black">
+			  <div class="flex items-center justify-between">
+				<div class="text-2xl">
+				  <Coins size={24} />
+				</div>
+				<div>
+				  <div class="text-2xl font-bold">248</div>
+				  <div class="text-sm text-gray-600">Points</div>
+				</div>
+			  </div>
+			</div>
+  
+			<div class="bg-green-100 rounded-xl p-4 shadow-sm border border-black">
+			  <div class="flex items-center justify-between">
+				<div class="text-2xl">
+				  <BookOpen size={24} />
+				</div>
+				<div>
+				  <div class="text-2xl font-bold">17</div>
+				  <div class="text-sm text-gray-600">Courses</div>
+				</div>
+			  </div>
+			</div>
+  
+			<div class="bg-blue-100 rounded-xl p-4 shadow-sm border border-black">
+			  <div class="flex items-center justify-between">
+				<div class="text-2xl">
+				  <Award size={24} />
+				</div>
+				<div>
+				  <div class="text-2xl font-bold">120</div>
+				  <div class="text-sm text-gray-600">Certificates</div>
+				</div>
+			  </div>
+			</div>
+  
+			<div class="bg-yellow-100 rounded-xl p-4 shadow-sm border border-black">
+			  <div class="flex items-center justify-between">
+				<div class="text-2xl">
+				  <Gamepad size={24} />
+				</div>
+				<div>
+				  <div class="text-2xl font-bold">31</div>
+				  <div class="text-sm text-gray-600">Challenges</div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+      </div>
+
+	<!-- Left Side Content -->
+    <div class="flex gap-8">
+		<div class="flex-1">
+			<!-- Current Course Section -->
+			<div class="bg-white rounded-xl p-6 mb-8 border border-gray-800">
+			<div class="flex items-center justify-between">
+				<div>
+				<div class="text-sm text-gray-600 mb-1">Course</div>
+				<h2 class="text-xl font-bold mb-2">Design Thinking I</h2>
+				<div class="text-gray-600">46% of 100% Completed</div>
+				<div class="w-64 bg-gray-200 rounded-full h-2 mt-2">
+					<div class="bg-purple-500 h-2 rounded-full" style="width: 46%"></div>
+				</div>
+				</div>
+				<button class="bg-black text-white px-6 py-2 rounded-full">
+				Resume learning
+				</button>
+			</div>
+			</div>
+
+			<!-- Recommended Section -->
+			<div class="mb-8">
+			<h2 class="text-xl font-bold mb-4">Recommended For You</h2>
+			<div class="grid grid-cols-2 gap-4">
+				{[
+					{ 
+					title: 'Typography', 
+					level: 'Beginner', 
+					bglevel: 'bg-green-100', 
+					gradient: 'bg-gradient-to-r from-green-400 to-emerald-400', 
+					duration: '1 hour' 
+					},
+					{ 
+					title: 'Basic 3D Design', 
+					level: 'Advanced', 
+					bglevel: 'bg-red-100', 
+					gradient: 'bg-gradient-to-r from-pink-500 to-rose-500', 
+					duration: '3 hours' 
+					},
+					{ 
+					title: 'UX Writing', 
+					level: 'Beginner', 
+					bglevel: 'bg-green-100', 
+					gradient: 'bg-gradient-to-r from-violet-400 to-purple-500', 
+					questions: '8 questions' 
+					},
+					{ 
+					title: 'Color Psychology', 
+					level: 'Intermediate',
+					bglevel: 'bg-blue-100', 
+					gradient: 'bg-gradient-to-r from-blue-400 to-indigo-500', 
+					questions: '24 questions' 
+					},
+				].map(item => (
+				<div class="bg-white rounded-xl p-4 shadow-sm border border-gray-800">
+					<div class="text-sm text-gray-600 mb-1">
+						{item.questions ? 'Challenge' : 'Course'}
+					</div>
+					<h3 class="text-lg font-bold mb-2">{item.title}</h3>
+					<div class="flex items-center space-x-2">
+					<span class={`${item.bglevel} bg-gray-100 px-2 py-1 rounded text-sm`}>
+						{item.level}
+					</span>
+					<span class="text-gray-600 text-sm">
+						{item.duration || item.questions}
+					</span>
+					</div>
+				</div>
+				))}
+			</div>
+			</div>
+		</div>	
+		<!-- Left Side Content -->
+
+			<!-- Right Side Content -->
+			<div class="w-80">
+				<div class="bg-white rounded-xl p-6 shadow-sm border border-black">
+				  <h2 class="text-xl font-bold mb-4">You're on a 5-day streak</h2>
+				  
+				  <div class="space-y-6">
+					<div>
+					  <div class="flex justify-between mb-2">
+						<span class="font-medium">Web Design</span>
+						<span class="text-gray-600">4,712 XP</span>
+					  </div>
+					  <div class="w-full bg-gray-200 rounded-full h-2">
+						<div class="bg-purple-500 h-2 rounded-full" style="width: 75%"></div>
+					  </div>
+					</div>
+		
+					<div>
+					  <div class="flex justify-between mb-2">
+						<span class="font-medium">UX Writing</span>
+						<span class="text-gray-600">2,910 XP</span>
+					  </div>
+					  <div class="w-full bg-gray-200 rounded-full h-2">
+						<div class="bg-purple-500 h-2 rounded-full" style="width: 30%"></div>
+					  </div>
+					</div>
+		
+					<div>
+					  <div class="flex justify-between mb-2">
+						<span class="font-medium">Design Thinking</span>
+						<span class="text-gray-600">1,561 XP</span>
+					  </div>
+					  <div class="w-full bg-gray-200 rounded-full h-2">
+						<div class="bg-purple-500 h-2 rounded-full" style="width: 20%"></div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+		
+
+
+</div>
+	<!-- Content Section End -->
+  </div>
+</MainLayout>
