@@ -1,7 +1,7 @@
 # Quixel - Modern Learning Dashboard
 
 Quixel is a modern, intuitive learning dashboard built with Astro and TailwindCSS. It provides a clean interface for tracking educational progress, managing courses, and monitoring learning achievements.
-It was inspired by Ilham Trisdika's design, check this out [Quixel UI/UX](https://dribbble.com/shots/25621688-Quixel-UI-UX-Learning-Dashboard).
+It was inspired by Ilham Tristadika's design, check this out [Quixel UI/UX](https://dribbble.com/shots/25621688-Quixel-UI-UX-Learning-Dashboard).
 
 ## Tech Stack
 - [Astro](https://astro.build) - Web Framework
