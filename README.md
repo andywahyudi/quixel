@@ -11,7 +11,7 @@ It was inspired by Ilham Tristadika's design, check this out [Quixel UI/UX](http
 ## Getting Started
 1. Clone the repository:
 ```bash
-git clone [your-repository-url]
+git clone git@github.com:andywahyudi/quixel.git
 ```
 2. Install dependencies:
 ```bash
